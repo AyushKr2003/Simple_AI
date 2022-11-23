@@ -5,16 +5,17 @@ import wikipedia
 import webbrowser
 import os
 import smtplib
+import pywhatkit as pwt
 
-engin = pyttsx3.init('sapi5')
-voices = engin.getProperty('voices')
-print(voices[1].id)
-engin.setProperty('voices', voices[1].id)
+engine = pyttsx3.init('sapi5')
+voices = engine.getProperty('voices')
+# print(voices[1].id)
+engine.setProperty('voice', voices[1].id)
 
 
 def speak(audio):
-    engin.say(audio)
-    engin.runAndWait()
+    engine.say(audio)
+    engine.runAndWait()
 
 
 def wishMe():
